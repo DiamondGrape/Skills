@@ -12,11 +12,7 @@ public abstract class BaseSkill : BaseSkillData
 	/// <param name="unit">Target of the skill.</param>
 	protected virtual bool CheckLevel(Unit unit)
 	{
-		bool returnVal = true;
-
-		if (unit.actorLevel < LevelNeeded)
-			 returnVal = false;
-		return returnVal;
+		return unit.actorLevel >= LevelNeeded;
 	}
 
 	/// <summary>
